@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    flex-wrap: wrap;
+    width: 100vw;
+    align-items: center;
+    padding: 0;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    90%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+#heroPar {
+    font-size: small;
+}
+
+#heroText {
+    opacity: 0;
+    color: black;
+    position: absolute;
+    z-index: 1;
+    top: 3vh;
+    animation-name: fadeOut;
+    animation-duration: 8s;
+}
+
+h1, h2 {
+    color: #FF4698;
+}
+
+#name {
+    animation-name: fadeInAnimation;
+    animation-duration: 11s;
+}
+
+/*Poistion relative so we can use poistion absolute for colorBlock*/
+#imageContainer {
+    display: flex;
+    flex: 1;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100vw;
+    height: 100vh;
+}
+
+@keyframes fadeInAnimation {
+    0% {opacity: 0;}
+    90% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+picture {
+    max-width: 100%;
+    position: relative;
+    flex: 1;
+    opacity: 1;
+    animation-name: fadeInAnimation;
+    animation-duration: 10s;
+}
+
+#largePP, #smallPP, #mediumPP{
+    width: 50vw;
+    height: auto;
+    max-height: 100%;
+    flex: 1;
+    justify-self: center;
+    border-radius: 5px;
+    background-color: white;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+
+#basicInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex: 1;
+    position: relative;
+    animation-name: fadeInAnimation;
+    animation-duration: 12s;
+}
+
+/*Styling for the profile picture*/
+#profilePic {
+    width: 50vw;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    z-index: 0;
+    position: relative;
+    min-width: 20%;
+    max-width: 50%;
+    margin: 20px;
+    top: 3vh;
+}
+
+/*Animation for color block on refresh of the page*/
+@keyframes colorBlock {
+    0% {width: 100vw; height: 0vh;}
+    25% {width: 100vw; height: 100vh;}
+    50% {width: 0vw; height: 100vh;}
+    75% {width: 100vw; height: 100vh;}
+    100% {width: 100vw; height: 53vh;}
+}
+
+/*Styling for the color block*/
+#ColorBlock {
+    background-image: linear-gradient(to right,#FF4698, #ff9970);
+    background-size: 1000%;
+    background-position: left;
+    position: absolute;
+    height: 53vh;
+    width: 100vw;
+    border-radius: 5px;
+    animation-name: colorBlock;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    flex: 1;
+}
+
+/*Basic styling for the nameAndDetails section*/
+#nameAndDetails {
+    margin: 20px;
+    position: relative;
+    top: 3vh;
+    flex: 2;
+    text-align: center;
+}
+
+/*Styling for lists in general*/
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: 25px;
+    font-weight: bold;
+}
+
+/*Styling for the header section to be displayed on the left*/
+header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    align-self: flex-start;
+    position: relative;
+    height: 100%;
+    width: 100%; 
+}
+
+/*Main content styling with different sections (Education, experience, etc)*/
+#mainContainer {
+    flex: 1;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    width: 90vw;
+    flex-wrap: wrap;
+    animation-name: fadeInAnimation;
+    animation-duration: 13s;
+}
+
+#Education, #Experience, #Skills, #Hobbies {
+    margin: 0 0 50px 0;
+}
+
+#educationSubContainer, #experienceSubContainer{
+    display: flex;
+}
+
+.qualificationName, .experienceName {
+    flex: 1;
+
+}
+
+.qualificationDescription, .experienceDescription {
+    flex: 2;
+}
+
+#Skills, #Hobbies {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Styling for icons*/
+.icon {
+    margin: 10px;
+    height: 20px;
+    width: 20px;
+    filter: invert(39%) sepia(100%) saturate(1253%) hue-rotate(307deg) brightness(98%) contrast(106%);
+}
+
+/*Keyframes for icon when hovering over it*/
+@keyframes iconAnimation {
+    8.3%{transform: rotate(-15deg) scale(120%);}
+    16.6%{transform: rotate(0deg) scale(110%); }
+    24.9%{transform: rotate(15deg) scale(120%);} 
+    33.26%{transform: rotate(0deg) scale(110%); }
+    41.6%{transform: rotate(-15deg) scale(120%); }
+    50%{transform: rotate(0deg) scale(110%); }
+    58.3%{transform: rotate(15deg) scale(120%); }
+    66.6%{transform: rotate(0deg) scale(110%); }
+    74.9%{transform: rotate(-15deg) scale(120%); }
+    83.2%{transform: rotate(0deg) scale(110%); }
+    91.5%{transform: rotate(15deg) scale(120%); }
+    100%{transform: rotate(0deg) scale(110%); }
+}
+
+/*Animation for on hover of icons*/
+.icon:hover {
+    animation-name: iconAnimation;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+    animation-iteration-count: infinite;
+}
+
+li {
+    margin: 0 0 10px 0;
+}
+
+footer {
+    background-image: linear-gradient(to right,#FF4698, #ff9970);
+    background-size: 10000%;
+    background-position: left;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: gradientMove;
+    animation-delay: 6s;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+form {
+    width: 350px;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#Submit {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+@media all and (min-width: 350px) and (max-width: 450px){
+    @keyframes colorBlock {
+        0% {width: 100vw; height: 0vh;}
+        25% {width: 100vw; height: 100vh;}
+        50% {width: 0vw; height: 100vh;}
+        75% {width: 100vw; height: 100vh;}
+        100% {width: 100vw; height: 60vh;}
+    }
+
+    #ColorBlock {
+        height: 60vh;
+        animation-name: colorBlock;
+        animation-duration: 5s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    #name {
+        color: white;
+    }
+
+    h1 {
+        font-size: 4vh;
+    }
+
+    h2 {
+        font-size: 3vh;
+    }
+
+    h3, p{
+        font-size: 2vh;
+    }
+
+    .icon{
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+        margin-right: 5px;
+    }
+
+    #heroText {
+        font-size: 5vh;
+        margin: 20px;
+    }
+
+    #heroPar {
+        font-size: 3vh;
+    }
+
+    #mainContainer {
+        padding: 10px;
+    }
+
+    .qualificationName, .experienceName {
+        margin-right: 5px;
+    }
+
+    .qualificationName, .qualificationDescription, .experienceName, .experienceDescription {
+        margin-bottom: 20px;
+    }
+
+    form {
+        width: 50vw;
+    }
+}
+
+@media all and (min-width: 600px) and (max-width: 850px){
+    @keyframes colorBlock {
+        0% {width: 100vw; height: 0vh;}
+        25% {width: 100vw; height: 100vh;}
+        50% {width: 0vw; height: 100vh;}
+        75% {width: 100vw; height: 100vh;}
+        100% {width: 100vw; height: 66vh;}
+    }
+
+    #ColorBlock {
+        height: 66vh;
+    }
+
+    #name {
+        color: white;
+    }
+
+    h1 {
+        font-size: 4vh;
+    }
+
+    h2 {
+        font-size: 3vh;
+    }
+
+    h3, p{
+        font-size: 2vh;
+    }
+
+    .icon{
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+        margin-right: 5px;
+    }
+
+    #heroText {
+        font-size: 5vh;
+        margin: 20px;
+    }
+
+    #heroPar {
+        font-size: 3vh;
+    }
+
+    #mainContainer {
+        padding: 10px;
+    }
+
+    .qualificationName, .experienceName {
+        margin-right: 5px;
+    }
+
+    .qualificationName, .qualificationDescription, .experienceName, .experienceDescription {
+        margin-bottom: 20px;
+    }
+
+    form {
+        width: 50vw;
+    }
+}
+
+@media all and (min-width: 1080px) and (max-width: 1600px){
+    @keyframes colorBlock {
+        0% {width: 100vw; height: 0vh;}
+        25% {width: 100vw; height: 100vh;}
+        50% {width: 0vw; height: 100vh;}
+        75% {width: 100vw; height: 100vh;}
+        100% {width: 100vw; height: 62vh;}
+    }
+
+    .icon {
+        width: 4vw;
+    }
+
+    #ColorBlock {
+        height: 62vh;
+    }
+
+    h1 {
+        font-size: 6vh;
+    }
+
+    h2 {
+        font-size: 4.5vh;
+    }
+
+    h3, p, label{
+        font-size: 3vh;
+    }
+
+    form {
+        width: 50vw;
+    }
+
+    #heroText {
+        font-size: 10vh;
+        margin: 20px;
+    }
+
+    #heroPar {
+        font-size: 5vh;
+    }
+
+    #mainContainer {
+        padding: 10px;
+    }
+
+    .qualificationName, .experienceName {
+        margin-right: 5px;
+    }
+
+    .qualificationName, .qualificationDescription, .experienceName, .experienceDescription {
+        margin-bottom: 20px;
+    }
+}
+
