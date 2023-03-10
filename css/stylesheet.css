@@ -247,7 +247,7 @@ footer {
     background-size: 10000%;
     background-position: left;
     padding: 10px;
-    color: black;
+    color: white;
     font-weight: bold;
     border-radius: 5px;
     display: flex;
@@ -285,6 +285,10 @@ label {
 
 #Submit:hover {
     transform: scale(110%);
+}
+
+#Subject {
+    font-weight:550;
 }
 
 
