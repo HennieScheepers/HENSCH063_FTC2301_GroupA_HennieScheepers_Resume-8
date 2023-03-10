@@ -131,6 +131,8 @@ h2 {
     height: 53vh;
     width: 100vw;
     border-radius: 5px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
     animation-name: colorBlock;
     animation-duration: 5s;
     animation-delay: 0s;
@@ -274,12 +276,19 @@ label {
     justify-content: flex-end;
 }
 
-#Submit {
+#Submit, input, select, textarea {
     font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#Submit:hover {
+    transform: scale(110%);
 }
 
 
-@media all and (min-width: 350px) and (max-width: 450px){
+@media all and (min-width: 350px) and (max-width: 600px){
     @keyframes colorBlock {
         0% {width: 100vw; height: 0vh;}
         25% {width: 100vw; height: 100vh;}
@@ -340,7 +349,7 @@ label {
     }
 
     form {
-        width: 50vw;
+        width: 90vw;
     }
 }
 
@@ -404,7 +413,7 @@ label {
     }
 }
 
-@media all and (min-width: 1080px) and (max-width: 1600px){
+@media all and (min-width: 850px) and (max-width: 1600px){
     @keyframes colorBlock {
         0% {width: 100vw; height: 0vh;}
         25% {width: 100vw; height: 100vh;}
@@ -414,7 +423,8 @@ label {
     }
 
     .icon {
-        width: 4vw;
+        width: 3vh;
+        height: 3vh;
     }
 
     #ColorBlock {
@@ -434,7 +444,7 @@ label {
     }
 
     form {
-        width: 50vw;
+        width: 70vw;
     }
 
     #heroText {
