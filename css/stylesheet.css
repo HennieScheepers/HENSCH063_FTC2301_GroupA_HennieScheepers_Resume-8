@@ -119,11 +119,12 @@ h2 {
 
 /*Animation for color block on refresh of the page*/
 @keyframes colorBlock {
-    0% {width: 100vw; height: 0vh; opacity: 1;}
+    0% {width: 100vw; height: 0vh; opacity: 0.8;}
     20% {width: 100vw; height: 100vh;}
     40% {width: 0vw; height: 100vh;}
     60% {width: 100vw; height: 100vh;}
-    80% {width: 100vw; height: 0vh; opacity: 1;}
+    80% {width: 100vw; height: 0vh; }
+    99% {opacity: 0.8;}
     100% {width: 100vw; height: 100vh; opacity: 0.15;}
 }
 
@@ -307,15 +308,6 @@ label {
 
 
 @media all and (min-width: 350px) and (max-width: 600px){
-    @keyframes colorBlock {
-        0% {width: 100vw; height: 0vh; opacity: 1;}
-        20% {width: 100vw; height: 100vh;}
-        40% {width: 0vw; height: 100vh;}
-        60% {width: 100vw; height: 100vh;}
-        80% {width: 100vw; height: 0vh; }
-        100% {width: 100vw; height: 100vh; opacity: 1;}
-    }
-
     .educationSubContainer, .experienceSubContainer {
         display: flex;
         flex-direction: column;
@@ -369,14 +361,6 @@ label {
 }
 
 @media all and (min-width: 600px) and (max-width: 850px){
-    @keyframes colorBlock {
-        0% {width: 100vw; height: 0vh; opacity: 1;}
-        20% {width: 100vw; height: 100vh;}
-        40% {width: 0vw; height: 100vh;}
-        60% {width: 100vw; height: 100vh;}
-        80% {width: 100vw; height: 0vh; }
-        100% {width: 100vw; height: 100vh; opacity: 1;}
-    }
 
 
     h1 {
@@ -423,14 +407,6 @@ label {
 }
 
 @media all and (min-width: 850px) and (max-width: 1600px){
-    @keyframes colorBlock {
-        0% {width: 100vw; height: 0vh; opacity: 1;}
-        20% {width: 100vw; height: 100vh;}
-        40% {width: 0vw; height: 100vh;}
-        60% {width: 100vw; height: 100vh;}
-        80% {width: 100vw; height: 0vh; }
-        100% {width: 100vw; height: 100vh; opacity: 1;}
-    }
 
     .icon {
         width: 3vh;
